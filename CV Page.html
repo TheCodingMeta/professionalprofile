@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        
         img{
+            align-content: center;
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -15,6 +16,15 @@
         ul{
             list-style: none;
         }
+        td{
+            width: 50%;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        h1{
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -22,13 +32,13 @@
     <table border="">
         <tr>
             <td>
-            <figure>
+            <figure align = "center">
                 <img src="Images/Profile.jpeg" alt="A profile picture" title="A picture of the Willem">
-                <figcaption align = "center">Willem J Viljoen</figcaption>
+                <figcaption>Willem J Viljoen</figcaption>
             </figure>
             </td>
             <td>
-                <h1 align = "center">Education</h1>
+                <h1>Education</h1>
                 <ul>
                     <li>Ctu Training Solutions- In progress</li>
                     <li>OCC SDD</li>
@@ -54,16 +64,19 @@
 
                 </ul>
             </td>
-            <td>
-                <h1>Achievements</h1>
-                <p>I graduated from HTS Drostdy with a 72 in IT and 78 in CAT.
-                    I was accepted into CTU Training Solutions.
-                </p>
-            </td>
+
         </tr>
         <tr>
             <td>
-                <h1>Personal Details</h1>
+                                <h1>Achievements</h1>
+                <p>I graduated from HTS Drostdy with a 72 in IT and 78 in CAT.
+                    I was accepted into CTU Training Solutions.
+                </p>
+
+
+            </td>
+            <td>
+                                <h1>Personal Details</h1>
                 <ul>
                     <li>Gender: Male</li>
                     <Li>Race: Whilte</Li>
@@ -71,17 +84,17 @@
                 </ul>
 
             </td>
-            <td>
+        </tr>
+        <tr>
+            <td colspan="2">
                 <h1>References</h1>
-                <h1>Company name: CTU Training Solutions</h1>
                 <ul>
+                    <li><strong>Company name: CTU Training Solutions</strong></li>
                     <li>Contact Person: Mr NB Dube</li>
                     <li>Position: Software Developer Facilitator</li>
                     <li>Contact Deails: newman.dube@ctutraining.co.za</li>
                 </ul>
             </td>
-        </tr>
-        <tr>
 
         </tr>
     </table>
