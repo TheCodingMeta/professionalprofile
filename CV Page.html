@@ -3,39 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>W.J Viljoen's CV</title>
     <style>
-        
-        img{
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        .cv {
+            width: 60%;
+            margin: 20px auto;
+            background-color: darkslategray;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px black;
+            padding: 10px 30px;
+        }
+
+        img {
             align-content: center;
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
         }
-        ul{
+        ul {
             list-style: none;
+            padding-left: 0;
         }
-        td{
+        li {
+            margin-bottom: 5px;
+        }
+        td {
             width: 50%;
+            vertical-align: top;
+            padding: 15px;
         }
-        table{
+        table {
             border-collapse: collapse;
-            width: 60%;
-            align-content: center;
+            width: 100%;
         }
-        h1{
+        tr:not(:last-child) td {
+            border-bottom: 1px solid gray;
+        }
+        h1 {
             text-align: center;
+            font-size: 22px;
+            color: deepskyblue;
+            border-bottom: 2px solid lightsteelblue;
+            padding-bottom: 5px;
+        }
+        .profile {
+            display: block;
+            width: fit-content;
+            margin: 10px auto;
+            text-decoration: none;
+            color: black;
+            background-color: deepskyblue;
+            border-radius: 8px;
+            padding: 10px 20px;
+            box-shadow: 2px 2px 5px black;
+        }
+        .profile:hover {
+            color: navy;
+        }
+        .contact {
+            width: 60%;
+            margin: 20px auto;
+            background-color: darkslategray;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px black;
+            padding: 10px 30px 30px;
+            box-sizing: border-box;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            resize: none;
+            background-color: dimgray;
+            color: whitesmoke;
+            border: 1px solid gray;
         }
 
-
+        .contact button {
+            padding: 10px 20px;
+            background-color: deepskyblue;
+            border: none;
+            border-radius: 8px;
+            color: black;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background-color: skyblue;
+        }
+        .contact input::placeholder,
+        .contact textarea::placeholder {
+            color: lightgray;
+        }
     </style>
 </head>
 <body>
-    <table border="">
+
+    <a class="profile" href="Profile.html">&#8592; Back to Profile</a>
+
+    <div class="cv">
+    <table>
         <tr>
             <td>
-            <figure align = "center">
+            <figure align="center">
                 <img src="Images/Profile.jpeg" alt="A profile picture" title="A picture of the Willem">
                 <figcaption>Willem J Viljoen</figcaption>
             </figure>
@@ -43,7 +122,7 @@
             <td>
                 <h1>Education</h1>
                 <ul>
-                    <li>Ctu Training Solutions- In progress</li>
+                    <li>CTU Training Solutions - In progress</li>
                     <li>OCC SDD</li>
                     <li>118707</li>
                     <li>DAV511, CPM511, IGL511, DAG511</li>
@@ -61,31 +140,32 @@
             <td>
                 <h1>SKILLS</h1>
                 <ul>
-                    <li>Dcent coding skills</li>
-                    <li>Good Computer skills</li>
-                    <li>Decent Communication Skills</li>
-
+                    <li>Decent coding skills</li>
+                    <li>Good computer skills</li>
+                    <li>Decent communication skills</li>
                 </ul>
             </td>
-
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h1>WORK INTEGRATED LEARNING (WIL)</h1>
+                <p>[Work Integrated Learning Placeholder]</p>
+            </td>
         </tr>
         <tr>
             <td>
-                                <h1>Achievements</h1>
+                <h1>Achievements</h1>
                 <p>I graduated from HTS Drostdy with a 72 in IT and 78 in CAT.
                     I was accepted into CTU Training Solutions.
                 </p>
-
-
             </td>
             <td>
-                                <h1>Personal Details</h1>
+                <h1>Personal Details</h1>
                 <ul>
                     <li>Gender: Male</li>
-                    <Li>Race: Whilte</Li>
+                    <li>Race: White</li>
                     <li>Nationality: South African</li>
                 </ul>
-
             </td>
         </tr>
         <tr>
@@ -95,11 +175,37 @@
                     <li><strong>Company name: CTU Training Solutions</strong></li>
                     <li>Contact Person: Mr NB Dube</li>
                     <li>Position: Software Developer Facilitator</li>
-                    <li>Contact Deails: On request</li>
+                    <li>Contact Details: Available on request</li>
                 </ul>
             </td>
-
         </tr>
     </table>
+    </div>
+
+    <div class="contact" align="center">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var subject = encodeURIComponent('Message from ' + name + ' from CV');
+            var body = encodeURIComponent(message);
+
+            window.location.href = 'mailto:placeholder@gmail.com?subject=' + subject + '&body=' + body;
+        });
+    </script>
+
 </body>
 </html>
