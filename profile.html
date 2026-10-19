@@ -7,47 +7,72 @@
     <title>Profile</title>
     <style>
 
-        img{
+        html {
+            background-color: black;
+        }
+
+        body {
+            position: relative;
+            width: 300px;
+            margin: auto;
+            margin-top: 10px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            box-shadow: 0px 0px 0px 1px dimgray;
+            padding: 20px;
+            overflow: hidden;
+            background-color: darkslategray;
+            color: whitesmoke;
+        }
+
+        img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
         }
-        body{
-            width: 300px;
-            margin: auto;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow:0px 0px 0px 1px gray; 
-            padding: 20px;
-        }
-        a{
-            text-decoration: none;
-            color: white;
 
-            background-color: rgb(112, 211, 249);
+        h3 {
+            margin-top: 0;
+            font-weight: normal;
+            color: silver;
+        }
+
+        .prof {
+            font-size: 14px;
+            color: silver;
+            margin-top: -10px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: deepskyblue;
             border-radius: 8px;
             cursor: pointer;
-            padding: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-
+            padding: 10px 20px;
+            box-shadow: 2px 2px 5px black;
         }
-        a:hover{
-            color: rgb(51, 155, 219);
+
+        a:hover {
+            color: navy;
         }
     </style>
-    <i class="fa-solid fa-arrow-up-right-from-square"></i>
 </head>
 <body>
-    <div align = "center">
+    <div align="center">
         <img src="Images/Profile.jpeg" alt="A profile picture" title="A picture of the Willem">
 
         <h1>Willem J. Viljoen</h1>
+        <h3>Software Development Student</h3>
+        <p>Currently studying towards a Software Development qualification at CTU Training Solutions</p>
 
-        <p>I am passionate about web development and creating user-friendly experiences. I enjoy learning new technologies and building projects that make a positive impact.</p>
-        <a href="https://thecodingmeta.github.io/professionalprofile/CV Page.html">View My Profile <i class="fa fa-external-link" style="font-size: small;"></i></a>
+        <p>I am passionate Developer that enjoys building websites and software</p>
+
+        <p>Proficient in: HTML, CSS, JavaScript and Python</p>
+
+        <a href="https://thecodingmeta.github.io/professionalprofile/CV Page.html" target="_blank" rel="noopener noreferrer">View my full CV <i class="fa fa-external-link" style="font-size: small;"></i></a>
     </div>
 </body>
 </html>
